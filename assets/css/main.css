@@ -322,6 +322,13 @@ input, select, textarea {
 		border-bottom-color: #eeeeee;
 	}
 
+	#description /*to affect description div in work experience*/
+	{
+		font-size: 0.75rem;
+		text-align: justify;
+		line-height: 1.38;
+	}
+
 /* Row */
 
 	.row {
@@ -2676,7 +2683,7 @@ input, select, textarea {
 			-ms-transform: scale(1.05);
 			transform: scale(1.05);
 		}
-
+		
 /* Actions */
 
 	ul.actions {
@@ -3657,6 +3664,17 @@ input, select, textarea {
 				border-bottom-color: transparent;
 				color: #18bfef !important;
 			}
+		
+		/*CSS to change nav bar specific github and linkedin icons to black */
+		#nav .icon.brands.fa-github
+		{
+			color: #000000;
+		}
+		/*CSS to change nav bar specific github and linkedin icons to black */
+		#nav .icon.brands.fa-linkedin
+		{
+			color: #000000;
+		}
 
 		#nav strong, #nav b {
 			color: #ffffff;
