@@ -1,5 +1,6 @@
 @import url(fontawesome-all.min.css);
 @import url("https://fonts.googleapis.com/css?family=Merriweather:300,700,300italic,700italic|Source+Sans+Pro:900");
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
 
 /*
 	Massively by HTML5 UP
@@ -181,7 +182,7 @@ input, select, textarea {
 	}
 
 	h1, h2, h3, h4, h5, h6 {
-		font-family: "Source Sans Pro", Helvetica, sans-serif;
+		font-family: 'Press Start 2P', cursive;
 		font-weight: 900;
 		line-height: 1.5;
 		letter-spacing: 0.075em;
@@ -3806,7 +3807,7 @@ input, select, textarea {
 			}
 
 			#main > .post header.major > h1, #main > .post header.major h2 {
-				font-size: 4rem;
+				font-size: 3rem;
 				line-height: 1.1;
 				margin: 0 0 2rem 0;
 			}
@@ -4706,3 +4707,12 @@ input, select, textarea {
 		}
 
 	}
+
+/* Quick fix for location section in footer of project page */
+#footer .project-location-block h3 {
+  margin-right: 1rem; /* space between heading and text */
+}
+
+#footer .project-location-block {
+  gap: 1.8rem; /* add space in flex layout */
+}
