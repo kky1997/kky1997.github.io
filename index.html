@@ -73,12 +73,13 @@
     toggleBtn.addEventListener('click', () => {
       if (isPlaying) {
         music.pause();
-        toggleBtn.textContent = "Pause Music";
-        toggleBtn.style.background = "#B42329";
-      } else {
-        music.play();
+
         toggleBtn.textContent = "Play Music";
         toggleBtn.style.background = "#9EDB4D";
+      } else {
+        music.play();
+        toggleBtn.textContent = "Pause Music";
+        toggleBtn.style.background = "#B42329";
       }
       isPlaying = !isPlaying;
     });
