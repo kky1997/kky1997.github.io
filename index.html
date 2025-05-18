@@ -33,6 +33,21 @@
       font-family: 'Press Start 2P', cursive;
     }
 
+    /* !important to override text colour and box-shadow from main.css*/
+    #music-toggle {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: #9EDB4D;
+      border-radius: 8px;
+      padding: 3px 10px;
+      font-size: 10px;
+      cursor: pointer;
+      font-family: 'Press Start 2P', cursive;
+      color: white !important;
+      box-shadow: none !important; 
+    }
+
     @keyframes pulse {
       0%, 100% { transform: scale(1); }
       50% { transform: scale(1.05); }
@@ -41,5 +56,37 @@
 </head>
 <body>
   <button class="start-button" onclick="window.location.href='about.html'">Press to Play</button>
+  
+  <audio id="bg-music" loop>
+    <source src="audio/387419_Unwavering_Emotions.mp3" type="audio/mpeg">
+  </audio>
+
+  <button id="music-toggle">Play Music</button>
+
+  <script>
+    const music = document.getElementById('bg-music');
+    const toggleBtn = document.getElementById('music-toggle');
+    let isPlaying = false;
+
+    // onclick event listener for play/pause music button
+    // updates textContent of button based on whether music playing or not
+    toggleBtn.addEventListener('click', () => {
+      if (isPlaying) {
+        music.pause();
+        toggleBtn.textContent = "Pause Music";
+        toggleBtn.style.background = "#B42329";
+      } else {
+        music.play();
+        toggleBtn.textContent = "Play Music";
+        toggleBtn.style.background = "#9EDB4D";
+      }
+      isPlaying = !isPlaying;
+    });
+
+    // preload music volumn 20%
+    window.addEventListener('load', () => {
+      music.volume = 0.2;
+    });
+  </script>
 </body>
 </html>
